@@ -1,7 +1,12 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.TCC" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your dark theme here. -->
-        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+    <!-- Forçando o tema a ser Light mesmo que o sistema esteja em modo escuro -->
+    <style name="Base.Theme.TCC" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/primary_blue</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/accent_green</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="android:windowBackground">@color/background_light</item>
+        <item name="android:textColorPrimary">@color/text_primary</item>
+        <item name="android:textColorSecondary">@color/text_secondary</item>
     </style>
 </resources>

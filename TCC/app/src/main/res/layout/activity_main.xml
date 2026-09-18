@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background_light"
     android:fillViewport="true">
 
     <LinearLayout
@@ -9,72 +11,103 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:orientation="vertical"
-        android:padding="32dp">
+        android:padding="24dp">
 
-        <TextView
+        <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/app_name"
-            android:textAppearance="?attr/textAppearanceHeadlineMedium"
-            android:textStyle="bold" />
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="0dp"
+            app:strokeColor="@color/border_color"
+            app:strokeWidth="1dp">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="@string/acesse_sua_conta"
-            android:textAppearance="?attr/textAppearanceBodyLarge" />
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="28dp"
-            android:hint="@string/email">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/etEmail"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textEmailAddress"
-                android:maxLines="1" />
-        </com.google.android.material.textfield.TextInputLayout>
+                android:orientation="vertical"
+                android:padding="32dp">
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:hint="@string/senha"
-            app:endIconMode="password_toggle"
-            xmlns:app="http://schemas.android.com/apk/res-auto">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/app_name"
+                    android:textAppearance="?attr/textAppearanceHeadlineMedium"
+                    android:textColor="@color/primary_blue"
+                    android:textStyle="bold" />
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/etPassword"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textPassword"
-                android:maxLines="1" />
-        </com.google.android.material.textfield.TextInputLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/acesse_sua_conta"
+                    android:textAppearance="?attr/textAppearanceBodyLarge"
+                    android:textColor="@color/text_secondary" />
 
-        <Button
-            android:id="@+id/btnLogin"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:text="@string/entrar"
-            android:textAllCaps="false" />
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:hint="@string/email"
+                    app:boxStrokeColor="@color/primary_blue"
+                    app:hintTextColor="@color/primary_blue">
 
-        <TextView
-            android:id="@+id/tvCadastrar"
-            android:layout_width="wrap_content"
-            android:layout_height="48dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="8dp"
-            android:clickable="true"
-            android:focusable="true"
-            android:gravity="center"
-            android:text="@string/cadastre_se"
-            android:textAppearance="?attr/textAppearanceBodyMedium"
-            android:textColor="?attr/colorPrimary" />
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textEmailAddress"
+                        android:maxLines="1"
+                        android:textColor="@color/text_primary" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:hint="@string/senha"
+                    app:boxStrokeColor="@color/primary_blue"
+                    app:endIconMode="password_toggle"
+                    app:hintTextColor="@color/primary_blue">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword"
+                        android:maxLines="1"
+                        android:textColor="@color/text_primary" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:id="@+id/btnLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="32dp"
+                    android:backgroundTint="@color/primary_blue"
+                    android:text="@string/entrar"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    app:cornerRadius="16dp" />
+
+                <TextView
+                    android:id="@+id/tvCadastrar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="24dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:padding="8dp"
+                    android:text="@string/cadastre_se"
+                    android:textAppearance="?attr/textAppearanceBodyMedium"
+                    android:textColor="@color/primary_blue"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
 
     </LinearLayout>
 </ScrollView>

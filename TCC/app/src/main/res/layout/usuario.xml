@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background_light"
     android:fillViewport="true">
 
     <LinearLayout
@@ -16,94 +18,139 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/voltar"
-            android:textAllCaps="false" />
+            android:textAllCaps="false"
+            app:cornerRadius="12dp"
+            app:strokeColor="@color/primary_blue"
+            android:textColor="@color/primary_blue" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:text="@string/informacoes_usuario"
-            android:textAppearance="?attr/textAppearanceHeadlineSmall"
-            android:textStyle="bold" />
-
-        <com.google.android.material.textfield.TextInputLayout
+        <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
-            android:hint="@string/nome">
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="0dp"
+            app:strokeWidth="1dp"
+            app:strokeColor="@color/border_color">
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/etUsuarioNome"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPersonName"
-                android:maxLines="1" />
-        </com.google.android.material.textfield.TextInputLayout>
+                android:orientation="vertical"
+                android:padding="24dp">
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:hint="@string/email">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/informacoes_usuario"
+                    android:textAppearance="?attr/textAppearanceHeadlineSmall"
+                    android:textColor="@color/text_primary"
+                    android:textStyle="bold" />
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/etUsuarioEmail"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textEmailAddress"
-                android:maxLines="1" />
-        </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:hint="@string/nome"
+                    app:boxStrokeColor="@color/primary_blue"
+                    app:hintTextColor="@color/primary_blue">
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:hint="@string/cpf">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etUsuarioNome"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:maxLines="1"
+                        android:textColor="@color/text_primary" />
+                </com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/etUsuarioCpf"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="number"
-                android:maxLength="11"
-                android:maxLines="1" />
-        </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:hint="@string/email"
+                    app:boxStrokeColor="@color/primary_blue"
+                    app:hintTextColor="@color/primary_blue">
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:hint="@string/data_nascimento">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etUsuarioEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textEmailAddress"
+                        android:maxLines="1"
+                        android:textColor="@color/text_primary" />
+                </com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/etUsuarioDataNascimento"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="date"
-                android:maxLines="1" />
-        </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:hint="@string/cpf"
+                    app:boxStrokeColor="@color/primary_blue"
+                    app:hintTextColor="@color/primary_blue">
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:hint="@string/celular">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etUsuarioCpf"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:maxLength="11"
+                        android:maxLines="1"
+                        android:textColor="@color/text_primary" />
+                </com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/etUsuarioCelular"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="phone"
-                android:maxLines="1" />
-        </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:hint="@string/data_nascimento"
+                    app:boxStrokeColor="@color/primary_blue"
+                    app:hintTextColor="@color/primary_blue">
 
-        <Button
-            android:id="@+id/btnEditar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:text="@string/editar"
-            android:textAllCaps="false" />
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etUsuarioDataNascimento"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="date"
+                        android:maxLines="1"
+                        android:textColor="@color/text_primary" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:hint="@string/celular"
+                    app:boxStrokeColor="@color/primary_blue"
+                    app:hintTextColor="@color/primary_blue">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etUsuarioCelular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="phone"
+                        android:maxLines="1"
+                        android:textColor="@color/text_primary" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:id="@+id/btnEditar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:backgroundTint="@color/primary_blue"
+                    android:text="@string/editar"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    app:cornerRadius="12dp" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
 
     </LinearLayout>
 </ScrollView>

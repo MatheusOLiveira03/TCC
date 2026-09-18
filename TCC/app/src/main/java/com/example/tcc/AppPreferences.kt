@@ -48,14 +48,15 @@ object AppPreferences {
         prefs(context).edit().putBoolean(KEY_LOGGED_IN, false).apply()
     }
 
-    fun isDarkTheme(context: Context): Boolean = prefs(context).getBoolean(KEY_DARK_THEME, false)
+    fun isDarkTheme(context: Context): Boolean = false // Forçando modo claro para seguir o design
 
     fun setDarkTheme(context: Context, enabled: Boolean) {
         prefs(context).edit().putBoolean(KEY_DARK_THEME, enabled).apply()
-        applyTheme(enabled)
+        // applyTheme(enabled) // Comentado para manter o design claro
+        applyTheme(false)
     }
 
-    fun applyStoredTheme(context: Context) = applyTheme(isDarkTheme(context))
+    fun applyStoredTheme(context: Context) = applyTheme(false)
 
     private fun applyTheme(dark: Boolean) {
         AppCompatDelegate.setDefaultNightMode(

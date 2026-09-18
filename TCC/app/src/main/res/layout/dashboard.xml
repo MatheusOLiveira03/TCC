@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background_light"
     android:fillViewport="true">
 
     <LinearLayout
@@ -24,6 +25,7 @@
                 android:layout_weight="1"
                 android:text="@string/ola_usuario_padrao"
                 android:textAppearance="?attr/textAppearanceHeadlineSmall"
+                android:textColor="@color/text_primary"
                 android:textStyle="bold" />
 
             <ImageButton
@@ -33,15 +35,17 @@
                 android:background="?attr/selectableItemBackgroundBorderless"
                 android:contentDescription="@string/configuracoes"
                 android:src="@android:drawable/ic_menu_preferences"
-                app:tint="?attr/colorOnSurface" />
+                app:tint="@color/text_secondary" />
         </LinearLayout>
 
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="28dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="16dp"
             app:cardElevation="0dp"
-            app:strokeColor="?attr/colorOutline"
+            app:strokeColor="@color/border_color"
             app:strokeWidth="1dp">
 
             <LinearLayout
@@ -56,36 +60,48 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/progresso_inicial"
-                    android:textAppearance="?attr/textAppearanceTitleLarge" />
+                    android:textAppearance="?attr/textAppearanceTitleLarge"
+                    android:textColor="@color/text_primary"
+                    android:textStyle="bold" />
 
                 <Button
                     android:id="@+id/btnVerMais"
                     style="?attr/materialButtonOutlinedStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
+                    android:layout_marginTop="16dp"
                     android:text="@string/ver_mais"
-                    android:textAllCaps="false" />
+                    android:textAllCaps="false"
+                    android:textColor="@color/primary_blue"
+                    app:cornerRadius="12dp"
+                    app:strokeColor="@color/primary_blue" />
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 
         <Button
             android:id="@+id/btnAcompanharEquipe"
-            style="?attr/materialButtonOutlinedStyle"
             android:layout_width="match_parent"
             android:layout_height="56dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="@color/white"
             android:text="@string/acompanhar_equipe"
-            android:textAllCaps="false" />
+            android:textAllCaps="false"
+            android:textColor="@color/primary_blue"
+            app:cornerRadius="16dp"
+            app:strokeColor="@color/border_color"
+            app:strokeWidth="1dp"
+            style="@style/Widget.Material3.Button.OutlinedButton"/>
 
         <Button
             android:id="@+id/btnVerApontamentos"
-            style="?attr/materialButtonOutlinedStyle"
             android:layout_width="match_parent"
             android:layout_height="56dp"
             android:layout_marginTop="12dp"
+            android:backgroundTint="@color/primary_blue"
             android:text="@string/ver_apontamentos"
-            android:textAllCaps="false" />
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            app:cornerRadius="16dp" />
 
     </LinearLayout>
 </ScrollView>

@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background_light"
     android:fillViewport="true">
 
     <LinearLayout
@@ -17,44 +18,74 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/voltar"
-            android:textAllCaps="false" />
+            android:textAllCaps="false"
+            android:textColor="@color/primary_blue"
+            app:cornerRadius="12dp"
+            app:strokeColor="@color/primary_blue" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:text="@string/cadastro_titulo"
-            android:textAppearance="?attr/textAppearanceHeadlineSmall"
-            android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="@string/cadastro_instrucao"
-            android:textAppearance="?attr/textAppearanceBodyMedium" />
-
-        <com.google.android.material.textfield.TextInputLayout
+        <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
-            android:hint="@string/codigo_usuario">
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="0dp"
+            app:strokeColor="@color/border_color"
+            app:strokeWidth="1dp">
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/etCodigoUsuario"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="text"
-                android:maxLines="1" />
-        </com.google.android.material.textfield.TextInputLayout>
+                android:orientation="vertical"
+                android:padding="24dp">
 
-        <Button
-            android:id="@+id/btnCadastrar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:text="@string/continuar"
-            android:textAllCaps="false" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cadastro_titulo"
+                    android:textAppearance="?attr/textAppearanceHeadlineSmall"
+                    android:textColor="@color/text_primary"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/cadastro_instrucao"
+                    android:textAppearance="?attr/textAppearanceBodyMedium"
+                    android:textColor="@color/text_secondary" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:hint="@string/codigo_usuario"
+                    app:boxStrokeColor="@color/primary_blue"
+                    app:hintTextColor="@color/primary_blue">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etCodigoUsuario"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:textColor="@color/text_primary" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:id="@+id/btnCadastrar"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="32dp"
+                    android:backgroundTint="@color/primary_blue"
+                    android:text="@string/continuar"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    app:cornerRadius="16dp" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
 
     </LinearLayout>
 </ScrollView>
