@@ -12,33 +12,41 @@
         android:orientation="vertical"
         android:padding="24dp">
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btnVoltar"
-            style="?attr/materialButtonOutlinedStyle"
+            style="@style/Widget.Material3.Button.OutlinedButton"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:text="@string/voltar"
             android:textAllCaps="false"
             android:textColor="@color/primary_blue"
             app:cornerRadius="12dp"
-            app:strokeColor="@color/primary_blue" />
+            app:strokeColor="@color/border_color" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="28dp"
             android:text="@string/apontamentos"
-            android:textAppearance="?attr/textAppearanceHeadlineSmall"
             android:textColor="@color/text_primary"
+            android:textSize="26sp"
             android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="@string/apontamentos_subtitulo"
+            android:textColor="@color/text_secondary"
+            android:textSize="14sp" />
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/cardItem1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
-            app:cardBackgroundColor="@color/white"
-            app:cardCornerRadius="16dp"
+            app:cardBackgroundColor="@color/surface"
+            app:cardCornerRadius="18dp"
             app:cardElevation="0dp"
             app:strokeColor="@color/border_color"
             app:strokeWidth="1dp">
@@ -49,28 +57,39 @@
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
                 android:padding="20dp">
-
-                <TextView
-                    android:id="@+id/tvTextoCard1"
+                <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="@string/apontamento_placeholder"
-                    android:textAppearance="?attr/textAppearanceBodyLarge"
-                    android:textColor="@color/text_primary" />
-
-                <Button
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/apontamento_rotulo"
+                        android:textColor="@color/primary_blue"
+                        android:textSize="11sp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/tvTextoCard1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:text="@string/apontamento_placeholder"
+                        android:textColor="@color/text_primary"
+                        android:textSize="15sp" />
+                </LinearLayout>
+                <com.google.android.material.button.MaterialButton
                     android:id="@+id/btnAdicionar1"
-                    style="?attr/materialButtonOutlinedStyle"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
                     android:layout_width="48dp"
                     android:layout_height="48dp"
-                    android:contentDescription="@string/adicionar_apontamento"
+                    android:layout_marginStart="12dp"
                     android:minWidth="0dp"
                     android:text="+"
                     android:textColor="@color/primary_blue"
                     android:textSize="20sp"
-                    app:cornerRadius="12dp"
-                    app:strokeColor="@color/primary_blue" />
+                    app:cornerRadius="14dp"
+                    app:strokeColor="@color/border_color" />
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 
@@ -78,9 +97,9 @@
             android:id="@+id/cardItem2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            app:cardBackgroundColor="@color/white"
-            app:cardCornerRadius="16dp"
+            android:layout_marginTop="14dp"
+            app:cardBackgroundColor="@color/surface"
+            app:cardCornerRadius="18dp"
             app:cardElevation="0dp"
             app:strokeColor="@color/border_color"
             app:strokeWidth="1dp">
@@ -91,30 +110,40 @@
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
                 android:padding="20dp">
-
-                <TextView
-                    android:id="@+id/tvTextoCard2"
+                <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="@string/apontamento_placeholder"
-                    android:textAppearance="?attr/textAppearanceBodyLarge"
-                    android:textColor="@color/text_primary" />
-
-                <Button
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/apontamento_rotulo"
+                        android:textColor="@color/primary_blue"
+                        android:textSize="11sp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/tvTextoCard2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:text="@string/apontamento_placeholder"
+                        android:textColor="@color/text_primary"
+                        android:textSize="15sp" />
+                </LinearLayout>
+                <com.google.android.material.button.MaterialButton
                     android:id="@+id/btnAdicionar2"
-                    style="?attr/materialButtonOutlinedStyle"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
                     android:layout_width="48dp"
                     android:layout_height="48dp"
-                    android:contentDescription="@string/adicionar_apontamento"
+                    android:layout_marginStart="12dp"
                     android:minWidth="0dp"
                     android:text="+"
                     android:textColor="@color/primary_blue"
                     android:textSize="20sp"
-                    app:cornerRadius="12dp"
-                    app:strokeColor="@color/primary_blue" />
+                    app:cornerRadius="14dp"
+                    app:strokeColor="@color/border_color" />
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
-
     </LinearLayout>
 </ScrollView>

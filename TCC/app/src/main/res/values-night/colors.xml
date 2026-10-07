@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Identidade visual no modo escuro -->
+    <color name="primary_blue">#6F98FF</color>
+    <color name="primary_container">#1A2E5D</color>
+    <color name="on_primary">#071326</color>
+    <color name="brand_navy">#081931</color>
+    <color name="brand_gray">#CFD3DF</color>
+
+    <!-- Superfícies -->
+    <color name="background_light">#09121F</color>
+    <color name="surface">#111C2A</color>
+    <color name="surface_secondary">#182536</color>
+
+    <!-- Texto e bordas -->
+    <color name="text_primary">#F4F7FB</color>
+    <color name="text_secondary">#A8B3C4</color>
+    <color name="border_color">#2A3A4F</color>
+
+    <!-- Estados -->
+    <color name="error">#FF8A80</color>
+    <color name="error_container">#3B2023</color>
+    <color name="success">#58D6A5</color>
+
+    <color name="white">#FFFFFFFF</color>
+    <color name="black">#FF000000</color>
+</resources>

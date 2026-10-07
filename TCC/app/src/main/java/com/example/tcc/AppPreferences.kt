@@ -1,6 +1,7 @@
 package com.example.tcc
 
 import android.content.Context
+import android.content.res.Configuration
 import androidx.appcompat.app.AppCompatDelegate
 
 object AppPreferences {
@@ -48,19 +49,40 @@ object AppPreferences {
         prefs(context).edit().putBoolean(KEY_LOGGED_IN, false).apply()
     }
 
-    fun isDarkTheme(context: Context): Boolean = false // Forçando modo claro para seguir o design
+    /**
+     * Antes de o usuário escolher manualmente um tema, o app acompanha o tema do sistema.
+     * Depois da primeira troca em Configurações, a preferência escolhida é persistida.
+     */
+    fun isDarkTheme(context: Context): Boolean {
+        val preferences = prefs(context)
+        if (preferences.contains(KEY_DARK_THEME)) {
+            return preferences.getBoolean(KEY_DARK_THEME, false)
+        }
+
+        val mode = context.resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK
+        return mode == Configuration.UI_MODE_NIGHT_YES
+    }
 
     fun setDarkTheme(context: Context, enabled: Boolean) {
         prefs(context).edit().putBoolean(KEY_DARK_THEME, enabled).apply()
-        // applyTheme(enabled) // Comentado para manter o design claro
-        applyTheme(false)
+        AppCompatDelegate.setDefaultNightMode(
+            if (enabled) AppCompatDelegate.MODE_NIGHT_YES else AppCompatDelegate.MODE_NIGHT_NO
+        )
     }
 
-    fun applyStoredTheme(context: Context) = applyTheme(false)
+    fun applyStoredTheme(context: Context) {
+        val preferences = prefs(context)
+        if (!preferences.contains(KEY_DARK_THEME)) {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM)
+            return
+        }
 
-    private fun applyTheme(dark: Boolean) {
         AppCompatDelegate.setDefaultNightMode(
-            if (dark) AppCompatDelegate.MODE_NIGHT_YES else AppCompatDelegate.MODE_NIGHT_NO
+            if (preferences.getBoolean(KEY_DARK_THEME, false)) {
+                AppCompatDelegate.MODE_NIGHT_YES
+            } else {
+                AppCompatDelegate.MODE_NIGHT_NO
+            }
         )
     }
 

@@ -18,14 +18,31 @@
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="13dp"
+                app:cardElevation="0dp"
+                app:strokeColor="@color/brand_gray"
+                app:strokeWidth="1dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/logo_descricao"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/logo_oficinaaprender" />
+            </com.google.android.material.card.MaterialCardView>
+
             <TextView
-                android:id="@+id/tvNomeUsuario"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
                 android:layout_weight="1"
-                android:text="@string/ola_usuario_padrao"
-                android:textAppearance="?attr/textAppearanceHeadlineSmall"
+                android:text="@string/app_name"
                 android:textColor="@color/text_primary"
+                android:textSize="19sp"
                 android:textStyle="bold" />
 
             <ImageButton
@@ -34,16 +51,44 @@
                 android:layout_height="48dp"
                 android:background="?attr/selectableItemBackgroundBorderless"
                 android:contentDescription="@string/configuracoes"
+                android:padding="12dp"
                 android:src="@android:drawable/ic_menu_preferences"
                 app:tint="@color/text_secondary" />
         </LinearLayout>
 
-        <com.google.android.material.card.MaterialCardView
+        <TextView
+            android:id="@+id/tvNomeUsuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="@string/ola_usuario_padrao"
+            android:textColor="@color/text_primary"
+            android:textSize="27sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/dashboard_subtitulo"
+            android:textColor="@color/text_secondary"
+            android:textSize="14sp" />
+
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="28dp"
-            app:cardBackgroundColor="@color/white"
-            app:cardCornerRadius="16dp"
+            android:text="@string/resumo_acompanhamento"
+            android:textColor="@color/text_primary"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:cardBackgroundColor="@color/surface"
+            app:cardCornerRadius="18dp"
             app:cardElevation="0dp"
             app:strokeColor="@color/border_color"
             app:strokeWidth="1dp">
@@ -51,57 +96,83 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center"
                 android:orientation="vertical"
-                android:padding="20dp">
+                android:padding="22dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/progresso"
+                    android:textColor="@color/primary_blue"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/tvProgresso"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
                     android:text="@string/progresso_inicial"
-                    android:textAppearance="?attr/textAppearanceTitleLarge"
                     android:textColor="@color/text_primary"
+                    android:textSize="24sp"
                     android:textStyle="bold" />
 
-                <Button
+                <com.google.android.material.button.MaterialButton
                     android:id="@+id/btnVerMais"
-                    style="?attr/materialButtonOutlinedStyle"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_gravity="end"
                     android:layout_marginTop="16dp"
                     android:text="@string/ver_mais"
                     android:textAllCaps="false"
                     android:textColor="@color/primary_blue"
                     app:cornerRadius="12dp"
-                    app:strokeColor="@color/primary_blue" />
+                    app:strokeColor="@color/border_color" />
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 
-        <Button
-            android:id="@+id/btnAcompanharEquipe"
+        <TextView
             android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:layout_marginTop="24dp"
-            android:backgroundTint="@color/white"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26dp"
+            android:text="@string/acesso_rapido"
+            android:textColor="@color/text_primary"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAcompanharEquipe"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:layout_marginTop="12dp"
+            android:gravity="start|center_vertical"
             android:text="@string/acompanhar_equipe"
             android:textAllCaps="false"
-            android:textColor="@color/primary_blue"
-            app:cornerRadius="16dp"
-            app:strokeColor="@color/border_color"
-            app:strokeWidth="1dp"
-            style="@style/Widget.Material3.Button.OutlinedButton"/>
+            android:textColor="@color/text_primary"
+            app:backgroundTint="@color/surface"
+            app:cornerRadius="14dp"
+            app:icon="@android:drawable/ic_menu_myplaces"
+            app:iconPadding="14dp"
+            app:iconTint="@color/primary_blue"
+            app:strokeColor="@color/border_color" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btnVerApontamentos"
+            style="@style/Widget.Material3.Button.OutlinedButton"
             android:layout_width="match_parent"
-            android:layout_height="56dp"
+            android:layout_height="58dp"
             android:layout_marginTop="12dp"
-            android:backgroundTint="@color/primary_blue"
+            android:gravity="start|center_vertical"
             android:text="@string/ver_apontamentos"
             android:textAllCaps="false"
-            android:textColor="@color/white"
-            app:cornerRadius="16dp" />
-
+            android:textColor="@color/text_primary"
+            app:backgroundTint="@color/surface"
+            app:cornerRadius="14dp"
+            app:icon="@android:drawable/ic_menu_edit"
+            app:iconPadding="14dp"
+            app:iconTint="@color/primary_blue"
+            app:strokeColor="@color/border_color" />
     </LinearLayout>
 </ScrollView>

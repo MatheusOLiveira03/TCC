@@ -1,13 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
+    <!-- Identidade visual extraída da logo Oficina Aprender -->
+    <color name="primary_blue">#0D58ED</color>
+    <color name="primary_container">#E8EFFF</color>
+    <color name="on_primary">#FFFFFFFF</color>
+    <color name="brand_navy">#081931</color>
+    <color name="brand_gray">#CFD3DF</color>
+
+    <!-- Superfícies -->
+    <color name="background_light">#F6F8FC</color>
+    <color name="surface">#FFFFFFFF</color>
+    <color name="surface_secondary">#EEF2F7</color>
+
+    <!-- Texto e bordas -->
+    <color name="text_primary">#081931</color>
+    <color name="text_secondary">#657084</color>
+    <color name="border_color">#D9DFE9</color>
+
+    <!-- Estados -->
+    <color name="error">#C62828</color>
+    <color name="error_container">#FDECEC</color>
+    <color name="success">#16865C</color>
+
     <color name="white">#FFFFFFFF</color>
-    <color name="primary_blue">#2D5CFE</color>
-    <color name="background_light">#F8F9FB</color>
-    <color name="text_primary">#1A1C1E</color>
-    <color name="text_secondary">#6C757D</color>
-    <color name="border_color">#E9ECEF</color>
-    <color name="accent_green">#10B981</color>
-    <color name="accent_orange">#F59E0B</color>
-    <color name="accent_purple">#8B5CF6</color>
+    <color name="black">#FF000000</color>
 </resources>

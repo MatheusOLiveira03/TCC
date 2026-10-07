@@ -12,23 +12,40 @@
         android:orientation="vertical"
         android:padding="24dp">
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btnVoltar"
-            style="?attr/materialButtonOutlinedStyle"
+            style="@style/Widget.Material3.Button.OutlinedButton"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:text="@string/voltar"
             android:textAllCaps="false"
             android:textColor="@color/primary_blue"
             app:cornerRadius="12dp"
-            app:strokeColor="@color/primary_blue" />
+            app:strokeColor="@color/border_color" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="@string/configuracoes"
+            android:textColor="@color/text_primary"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="@string/configuracoes_subtitulo"
+            android:textColor="@color/text_secondary"
+            android:textSize="14sp" />
 
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
-            app:cardBackgroundColor="@color/white"
-            app:cardCornerRadius="16dp"
+            app:cardBackgroundColor="@color/surface"
+            app:cardCornerRadius="18dp"
             app:cardElevation="0dp"
             app:strokeColor="@color/border_color"
             app:strokeWidth="1dp">
@@ -37,68 +54,59 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="24dp">
+                android:padding="16dp">
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/configuracoes"
-                    android:textAppearance="?attr/textAppearanceHeadlineSmall"
-                    android:textColor="@color/text_primary"
-                    android:textStyle="bold" />
-
-                <Button
+                <com.google.android.material.button.MaterialButton
                     android:id="@+id/btnMudarTamanhoFonte"
-                    style="?attr/materialButtonOutlinedStyle"
+                    style="@style/Widget.Material3.Button.TextButton"
                     android:layout_width="match_parent"
                     android:layout_height="56dp"
-                    android:layout_marginTop="24dp"
+                    android:gravity="start|center_vertical"
                     android:text="@string/mudar_tamanho_fontes"
                     android:textAllCaps="false"
-                    android:textColor="@color/text_primary"
-                    app:cornerRadius="12dp"
-                    app:strokeColor="@color/border_color" />
+                    android:textColor="@color/text_primary" />
 
-                <Button
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/border_color" />
+
+                <com.google.android.material.button.MaterialButton
                     android:id="@+id/btnMudarTema"
-                    style="?attr/materialButtonOutlinedStyle"
+                    style="@style/Widget.Material3.Button.TextButton"
                     android:layout_width="match_parent"
                     android:layout_height="56dp"
-                    android:layout_marginTop="12dp"
+                    android:gravity="start|center_vertical"
                     android:text="@string/mudar_tema"
                     android:textAllCaps="false"
-                    android:textColor="@color/text_primary"
-                    app:cornerRadius="12dp"
-                    app:strokeColor="@color/border_color" />
+                    android:textColor="@color/text_primary" />
 
-                <Button
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/border_color" />
+
+                <com.google.android.material.button.MaterialButton
                     android:id="@+id/btnVerInfoUsuario"
-                    style="?attr/materialButtonOutlinedStyle"
+                    style="@style/Widget.Material3.Button.TextButton"
                     android:layout_width="match_parent"
                     android:layout_height="56dp"
-                    android:layout_marginTop="12dp"
+                    android:gravity="start|center_vertical"
                     android:text="@string/ver_informacoes_usuario"
                     android:textAllCaps="false"
-                    android:textColor="@color/text_primary"
-                    app:cornerRadius="12dp"
-                    app:strokeColor="@color/border_color" />
-
-                <Button
-                    android:id="@+id/btnSairPerfil"
-                    android:layout_width="match_parent"
-                    android:layout_height="56dp"
-                    android:layout_marginTop="32dp"
-                    android:backgroundTint="#FFF1F2"
-                    android:text="@string/sair_do_perfil"
-                    android:textAllCaps="false"
-                    android:textColor="#E11D48"
-                    app:cornerRadius="12dp"
-                    app:strokeColor="#FDA4AF"
-                    app:strokeWidth="1dp"
-                    style="@style/Widget.Material3.Button.TextButton"/>
-
+                    android:textColor="@color/text_primary" />
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSairPerfil"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/sair_do_perfil"
+            android:textAllCaps="false"
+            android:textColor="@color/error"
+            app:backgroundTint="@color/error_container"
+            app:cornerRadius="14dp" />
     </LinearLayout>
 </ScrollView>

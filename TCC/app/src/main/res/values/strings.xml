@@ -1,6 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Oficina Aprender</string>
     <string name="acesse_sua_conta">Acesse sua conta</string>
+    <string name="login_subtitulo">Entre para acompanhar sua rotina e seu progresso.</string>
     <string name="email">E-mail</string>
     <string name="senha">Senha</string>
     <string name="confirmar_senha">Confirmar senha</string>
@@ -21,15 +23,18 @@
     <string name="cadastro_titulo">Cadastro</string>
     <string name="cadastro_instrucao">Informe o código recebido para continuar.</string>
     <string name="codigo_usuario">Código do usuário</string>
+    <string name="codigo_acesso">Código de acesso</string>
     <string name="confirmar_informacoes">Suas informações estão corretas?</string>
+    <string name="confirmar_subtitulo">Confira os dados antes de seguir para a criação da senha.</string>
     <string name="dados_usuario_placeholder">Código informado</string>
     <string name="codigo_informado">Código informado: %1$s</string>
-    <string name="confirmacao_observacao">Nesta versão, o código é validado apenas localmente. A consulta real do usuário será feita pelo backend.</string>
-    <string name="corrigir_informacoes">Informe seus dados corretamente</string>
+    <string name="confirmacao_observacao">Nesta versão, o código é validado localmente. A consulta real do usuário será feita pelo backend.</string>
+    <string name="corrigir_informacoes">Corrigir informações</string>
+    <string name="corrigir_subtitulo">Preencha os dados abaixo para continuar.</string>
     <string name="nome">Nome</string>
     <string name="cpf">CPF</string>
     <string name="crie_uma_senha">Crie uma senha</string>
-    <string name="senha_requisitos">Use pelo menos 8 caracteres.</string>
+    <string name="senha_requisitos">Use pelo menos 8 caracteres e confirme a senha abaixo.</string>
     <string name="criar_senha">Criar senha</string>
 
     <string name="erro_email_invalido">Informe um e-mail válido.</string>
@@ -43,18 +48,25 @@
 
     <string name="ola_usuario">Olá, %1$s</string>
     <string name="ola_usuario_padrao">Olá, usuário</string>
+    <string name="dashboard_subtitulo">Veja um resumo do seu acompanhamento.</string>
+    <string name="resumo_acompanhamento">Resumo do acompanhamento</string>
+    <string name="acesso_rapido">Acesso rápido</string>
     <string name="configuracoes">Configurações</string>
+    <string name="configuracoes_subtitulo">Ajuste a aparência e os dados da sua conta.</string>
     <string name="progresso">Progresso</string>
+    <string name="progresso_subtitulo">Acompanhe sua evolução por área.</string>
     <string name="progresso_inicial">Progresso: 0/0</string>
     <string name="ver_mais">Ver mais</string>
     <string name="ver_menos">Ver menos</string>
     <string name="acompanhar_equipe">Acompanhar equipe</string>
+    <string name="equipe_subtitulo">Veja os profissionais vinculados ao seu acompanhamento.</string>
     <string name="ver_apontamentos">Ver apontamentos</string>
     <string name="apontamentos">Apontamentos</string>
+    <string name="apontamentos_subtitulo">Registre e consulte observações importantes.</string>
 
-    <string name="mudar_tamanho_fontes">Mudar tamanho das fontes</string>
+    <string name="mudar_tamanho_fontes">Tamanho das fontes</string>
     <string name="mudar_tema">Alternar tema claro/escuro</string>
-    <string name="ver_informacoes_usuario">Ver informações do usuário</string>
+    <string name="ver_informacoes_usuario">Informações do usuário</string>
     <string name="sair_do_perfil">Sair do perfil</string>
     <string name="confirmar_saida">Deseja realmente sair deste perfil?</string>
     <string name="tamanho_da_fonte">Tamanho da fonte</string>
@@ -75,12 +87,16 @@
 
     <string name="profissional_1">Profissional 1 · Ocupação</string>
     <string name="profissional_2">Profissional 2 · Ocupação</string>
+    <string name="profissional_equipe">Profissional da equipe</string>
     <string name="dados_equipe_api_pendente">Os dados detalhados deste profissional serão carregados pela API.</string>
 
     <string name="apontamento_placeholder">Toque em + para registrar um apontamento.</string>
     <string name="adicionar_apontamento">Adicionar apontamento</string>
+    <string name="apontamento_rotulo">APONTAMENTO</string>
 
     <string name="informacoes_usuario">Informações do usuário</string>
+    <string name="usuario_subtitulo">Confira ou altere seus dados pessoais.</string>
     <string name="data_nascimento">Data de nascimento</string>
     <string name="celular">Celular</string>
+    <string name="logo_descricao">Logo Oficina Aprender</string>
 </resources>
