@@ -5,9 +5,10 @@ import android.os.Bundle
 import android.widget.Button
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
-class ConfiguracoesActivity : BaseActivity() {
+class ConfiguracoesActivity : ApiActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        if (!sessaoValida()) return
         setContentView(R.layout.configuracoes)
 
         findViewById<Button>(R.id.btnMudarTamanhoFonte).setOnClickListener { showFontSizeDialog() }
