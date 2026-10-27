@@ -6,7 +6,7 @@ object Validators {
     fun isEmailValid(email: String): Boolean =
         email.isNotBlank() && Patterns.EMAIL_ADDRESS.matcher(email.trim()).matches()
 
-    fun isPasswordValid(password: String): Boolean = password.length >= 8
+    fun isPasswordValid(password: String): Boolean = password.length >= 8 && password.toByteArray(Charsets.UTF_8).size <= 72
 
     fun isCpfValid(rawCpf: String): Boolean {
         val cpf = rawCpf.filter(Char::isDigit)
